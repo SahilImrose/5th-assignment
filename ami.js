@@ -102,11 +102,11 @@ const addMealToDOM = meal => {
   <h1>${meal.strMeal}</h1>
   <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
   <div class="single-meal-info">
-  ${meal.strCategory ? `<p>${meal.strCategory}</p>` : ''}
-  ${meal.strArea ? `<p>${meal.strArea}</p>` : ''}
+  ${meal.strCategory ? `<p class="size">${meal.strCategory}</p>` : ''}
+  ${meal.strArea ? `<p class="size">${meal.strArea}</p>` : ''}
   </div>
   <div class="main">
-  <p>${meal.strInstructions}</p>
+  <p class="color">${meal.strInstructions}</p>
   <h2>Ingredients</h2>
   <ul>
   ${ingredients.map(ing => `<li>${ing}</li>`).join('')}
@@ -116,7 +116,7 @@ const addMealToDOM = meal => {
   `
 }
 
-//Event Listerner
+//Event Listener
 submit.addEventListener("submit", searchMeal);
 random.addEventListener('click',randomMeal);
 mealsEl.addEventListener("click", (e) => {
